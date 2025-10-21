@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sayla Beauty — Makeup & Hijab Do</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+         :root {
+            --pink: #f45b8b;
+            --soft-pink: #ffd7e3;
+            --gold: #d4a34a;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fff;
+            color: #222
+        }
+        
+        .brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700
+        }
+        
+        .hero {
+            background: linear-gradient(90deg, rgba(255, 245, 247, 0.9), rgba(255, 250, 240, 0.6));
+        }
+        
+        .btn-pink {
+            background: var(--pink);
+            color: #fff
+        }
+        
+        .card-product img {
+            height: 220px;
+            object-fit: cover
+        }
+        /* falling roses animation */
+        
+        .rose-wrap {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: -1
+        }
+        
+        .rose {
+            position: absolute;
+            top: -10vh;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 200, 220, 0.95), rgba(255, 140, 170, 0.9));
+            opacity: .9;
+            transform-origin: center;
+            animation: rose-fall 10s linear infinite;
+        }
+        
+        @keyframes rose-fall {
+            0% {
+                transform: translateY(-10vh) rotate(0) translateX(0) scale(1);
+                opacity: 1
+            }
+            50% {
+                transform: translateY(50vh) rotate(90deg) translateX(30px) scale(.95);
+                opacity: .95
+            }
+            100% {
+                transform: translateY(120vh) rotate(180deg) translateX(-30px) scale(.9);
+                opacity: .8
+            }
+        }
+        /* small tweaks */
+        
+        .product-grid .card {
+            transition: transform .2s
+        }
+        
+        .product-grid .card:hover {
+            transform: translateY(-6px)
+        }
+        
+        footer {
+            background: #faf5f7
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="rose-wrap" aria-hidden>
+        <!-- generate some rose elements positioned horizontally -->
+        <div class="rose" style="left:2%; animation-delay:0s"></div>
+        <div class="rose" style="left:12%; animation-delay:0.8s"></div>
+        <div class="rose" style="left:22%; animation-delay:1.6s"></div>
+        <div class="rose" style="left:32%; animation-delay:2.4s"></div>
+        <div class="rose" style="left:42%; animation-delay:3.2s"></div>
+        <div class="rose" style="left:52%; animation-delay:4s"></div>
+        <div class="rose" style="left:62%; animation-delay:4.8s"></div>
+        <div class="rose" style="left:72%; animation-delay:5.6s"></div>
+        <div class="rose" style="left:82%; animation-delay:6.4s"></div>
+        <div class="rose" style="left:92%; animation-delay:7.2s"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand brand" href="#">Sayla Beauty <small class="text-pink">— Makeup & Hijab Do</small></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#services">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#shop">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="display-5 brand">Tampil anggun dan percaya diri bersama <span style="color:var(--pink)">Sayla Beauty</span></h1>
+                    <p class="lead text-muted">Layanan makeup & hijab do profesional untuk wedding, wisuda, photoshoot, dan acara istimewa. Juga tersedia produk kecantikan pilihan.</p>
+                    <div class="d-flex gap-2">
+                        <a href="#contact" class="btn btn-pink btn-lg">Pesan Sekarang</a>
+                        <a href="#shop" class="btn btn-outline-pink btn-lg btn-secondary">Lihat Koleksi</a>
+                    </div>
+                    <div class="mt-3">
+                        <small class="text-muted">Promo: Diskon 10% untuk paket wedding (syarat & ketentuan
+                            berlaku).</small>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="foto/animasi.jpg" alt="Sayla Beauty" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <!-- Services -->
+        <section id="services" class="mb-5">
+            <h2 class="h4">Layanan Unggulan</h2>
+            <div class="row g-3 mt-3">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Wedding Makeup & Hijab Do</h5>
+                            <p class="card-text text-muted">Layanan all-in on-day + trial. Paket lengkap makeup, hair & hijab styling.</p>
+                            <a href="#contact" class="stretched-link text-pink">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Graduation Glam</h5>
+                            <p class="card-text text-muted">Soft glam yang pas untuk pemotretan wisuda dan acara keluarga.
+                            </p>
+                            <a href="#contact" class="stretched-link text-pink">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Party & Photoshoot</h5>
+                            <p class="card-text text-muted">Look bold, trendy, atau natural sesuai keinginanmu.</p>
+                            <a href="#contact" class="stretched-link text-pink">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop -->
+        <section id="shop" class="mb-5">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2 class="h4">Produk Pilihan</h2>
+                <div class="text-muted small">Filter: <span class="badge bg-light text-dark">Semua</span></div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3 mt-3 product-grid">
+                <!-- product cards (will be populated by JS for convenience) -->
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="mb-5">
+            <h2 class="h4">Galeri Before / After</h2>
+            <div class="row g-3 mt-2">
+                <!-- placeholders -->
+                <div class="col-sm-6 col-md-4"><img src="foto/Gambar WhatsApp 2025-10-21 pukul 14.08.41_6818585a.jpg" class="img-fluid rounded shadow-sm" alt="Portfolio 1"></div>
+                <div class="col-sm-6 col-md-4"><img src="foto/Gambar WhatsApp 2025-10-21 pukul 14.08.41_70bd32ab.jpg" class="img-fluid rounded shadow-sm" alt="Portfolio 2"></div>
+                <div class="col-sm-6 col-md-4"><img src="foto/Gambar WhatsApp 2025-10-21 pukul 14.08.42_60f8a250.jpg" class="img-fluid rounded shadow-sm" alt="Portfolio 3"></div>
+                <div class="col-sm-6 col-md-4"><img src="foto/Gambar WhatsApp 2025-10-21 pukul 14.08.42_a91c3279.jpg" class="img-fluid rounded shadow-sm" alt="Portfolio 4"></div>
+                <div class="col-sm-6 col-md-4"><img src="foto/Gambar WhatsApp 2025-10-21 pukul 14.08.42_dd57d8d8.jpg" class="img-fluid rounded shadow-sm" alt="Portfolio 5"></div>
+                <div class="col-sm-6 col-md-4"><img src="foto/Gambar WhatsApp 2025-10-21 pukul 14.08.42_e709815b.jpg" class="img-fluid rounded shadow-sm" alt="Portfolio 6"></div>
+            </div>
+        </section>
+
+        <!-- About & Contact -->
+        <section id="about-contact" class="mb-5">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h2 class="h4">Tentang Kami</h2>
+                    <p class="text-muted">Sayla Beauty hadir untuk membantu setiap wanita tampil mempesona di momen pentingnya. Tim kami makeup artist dan hijab stylist berpengalaman, menggunakan produk berkualitas.
+                    </p>
+                    <p class="fw-semibold">Motto: "Setiap wanita berhak tampil mempesona."</p>
+                    <img src="foto/animasi.jpg" class="img-fluid rounded shadow-sm mt-3" alt="Team">
+                </div>
+                <div class="col-md-6" id="contact">
+                    <h2 class="h4">Kontak & Booking</h2>
+                    <form id="bookingForm" class="bg-white p-3 rounded shadow-sm">
+                        <div class="mb-2">
+                            <label class="form-label">Nama</label>
+                            <input type="text" id="name" class="form-control" placeholder="Nama lengkap" required>
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label">Tanggal Acara</label>
+                            <input type="date" id="date" class="form-control" required>
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label">Jenis Makeup</label>
+                            <select id="type" class="form-select">
+                                <option>Wedding Makeup & Hijab Do</option>
+                                <option>Graduation Glam</option>
+                                <option>Party / Photoshoot</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label">Lokasi</label>
+                            <input type="text" id="location" class="form-control" placeholder="Contoh: Kota Bandung">
+                        </div>
+                        <div class="d-flex gap-2">
+                            <a id="waBtn" class="btn btn-success" target="_blank">Konsultasi via WhatsApp</a>
+                            <button type="submit" class="btn btn-outline-secondary">Kirim</button>
+                        </div>
+                    </form>
+
+                    <div class="mt-3 small text-muted">
+                        <p><strong>Jam operasional:</strong> 09.00 - 20.00 WIB</p>
+                        <p><strong>Lokasi:</strong> Studio Sayla Beauty (koordinat dapat ditambahkan)</p>
+                    </div>
+
+                    <!-- Cart -->
+                    <div class="mt-3">
+                        <h5>Keranjang (<span id="cartCount">0</span>)</h5>
+                        <div id="cartList" class="bg-white p-2 rounded shadow-sm small text-muted">Belum ada produk di keranjang.
+                        </div>
+                        <div class="mt-2 d-grid">
+                            <a id="checkoutBtn" class="btn btn-pink" target="_blank">Checkout via WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-4 text-center">
+        <div class="container small text-muted">© <span id="year"></span> Sayla Beauty. All rights reserved.</div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a id="floatingWA" href="#" target="_blank" class="position-fixed end-0 bottom-0 m-4 btn btn-success rounded-circle shadow" style="width:56px;height:56px;display:flex;align-items:center;justify-content:center;">WA</a>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // --- basic data (replace whatsappNumber) ---
+        const whatsappNumber = '6281234567890'; // ganti nomor (kode negara tanpa +)
+
+        // sample products
+        const products = [{
+            id: 1,
+            name: 'Velvet Matte Lipstick',
+            price: 120000,
+            img: 'https://d2jlkn4m127vak.cloudfront.net/medias/products/variant-1581569922.png'
+        }, {
+            id: 2,
+            name: 'Glow Foundation',
+            price: 180000,
+            img: 'https://holikaholika.co.id/cdn/shop/articles/1_1024x.png?v=1566459989'
+        }, {
+            id: 3,
+            name: 'Pastel Hijab Pins (5pcs)',
+            price: 45000,
+            img: 'https://i.etsystatic.com/9261463/r/il/62c57e/1264711593/il_570xN.1264711593_c2bn.jpg'
+        }, {
+            id: 4,
+            name: 'Eyeshadow Palette - Bloom',
+            price: 220000,
+            img: 'https://www.beautyhaul.com/assets/uploads/products/thumbs/800x800/Goddess_Eyeshadow_Palette-mauve_Cover1.png'
+        }];
+
+        // render products
+        const grid = document.querySelector('.product-grid');
+        products.forEach(p => {
+            const col = document.createElement('div');
+            col.className = 'col';
+            col.innerHTML = `
+        <div class="card h-100">
+          <img src="${p.img}" class="card-img-top" alt="${p.name}">
+          <div class="card-body d-flex flex-column">
+            <h6 class="card-title">${p.name}</h6>
+            <p class="text-muted small mb-2">Kategori: Makeup</p>
+            <div class="mt-auto d-flex justify-content-between align-items-center">
+              <div class="fw-semibold">Rp${p.price.toLocaleString()}</div>
+              <button class="btn btn-sm btn-pink add-btn" data-id="${p.id}">Tambah</button>
+            </div>
+          </div>
+        </div>`;
+            grid.appendChild(col);
+        });
+
+        // cart logic
+        let cart = [];
+
+        function updateCartUI() {
+            const cartList = document.getElementById('cartList');
+            const cartCount = document.getElementById('cartCount');
+            const checkoutBtn = document.getElementById('checkoutBtn');
+            if (cart.length === 0) {
+                cartList.innerHTML = 'Belum ada produk di keranjang.';
+            } else {
+                cartList.innerHTML = '<ul class="list-unstyled mb-0">' + cart.map(i =>
+                        `<li>${i.name} <span class="float-end">Rp${i.price.toLocaleString()}</span></li>`).join('') +
+                    '</ul>';
+            }
+            cartCount.textContent = cart.length;
+            const total = cart.reduce((s, i) => s + i.price, 0);
+            const waText = encodeURIComponent(
+                `Halo Sayla Beauty, saya ingin checkout produk. Total: Rp${total.toLocaleString()}. Produk: ${cart.map(i=>i.name).join(', ')}`
+            );
+            checkoutBtn.href = `https://wa.me/${whatsappNumber}?text=${waText}`;
+        }
+
+        document.addEventListener('click', (e) => {
+            if (e.target && e.target.matches('.add-btn')) {
+                const id = parseInt(e.target.dataset.id);
+                const p = products.find(x => x.id === id);
+                cart.push(p);
+                updateCartUI();
+            }
+        });
+
+        // booking WhatsApp button
+        const waBtn = document.getElementById('waBtn');
+
+        function updateWaLink() {
+            const name = document.getElementById('name').value || '[nama]';
+            const date = document.getElementById('date').value || '[tanggal]';
+            const type = document.getElementById('type').value || '[jenis]';
+            const loc = document.getElementById('location').value || '[lokasi]';
+            const text = encodeURIComponent(
+                `Halo Sayla Beauty, saya ${name} ingin tanya untuk pemesanan. Tanggal: ${date}, Jenis: ${type}, Lokasi: ${loc}`
+            );
+            waBtn.href = `https://wa.me/${whatsappNumber}?text=${text}`;
+            document.getElementById('floatingWA').href = `https://wa.me/${whatsappNumber}`;
+        }
+        updateWaLink();
+        ['name', 'date', 'type', 'location'].forEach(id => document.getElementById(id).addEventListener('input',
+            updateWaLink));
+
+        // booking form submit behaviour (prevents actual post and open WA link)
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            updateWaLink();
+            // open wa link in new tab
+            window.open(waBtn.href, '_blank');
+        });
+
+        // footer year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // initial cart UI
+        updateCartUI();
+    </script>
+</body>
+
+</html>
