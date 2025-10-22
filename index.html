@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sayla Beauty — Makeup & Hijab Do</title>
+    <title>Sayla Beauty-Makeup & Hijab Do</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -107,9 +107,11 @@
     </div>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
         <div class="container">
-            <a class="navbar-brand brand" href="#">Sayla Beauty <small class="text-pink">— Makeup & Hijab Do</small></a>
+            <a class="navbar-brand" href="#">
+                <img src="foto/Gambar WhatsApp 2025-10-22 pukul 17.57.14_f221ffc5-pica (1).png" alt="Bootstrap" width="45" height="40">Sayla Beauty
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -126,7 +128,7 @@
 
     <!-- Hero -->
     <header class="hero py-5">
-        <div class="container">
+        <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <h1 class="display-5 brand">Tampil anggun dan percaya diri bersama <span style="color:var(--pink)">Sayla Beauty</span></h1>
@@ -141,7 +143,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img src="foto/animasi.jpg" alt="Sayla Beauty" class="img-fluid rounded shadow">
+                    <img src="foto/Gambar_WhatsApp_2025-10-22_pukul_17.57.14_f221ffc5-pica__1_-removebg-preview (1).png" alt="Sayla Beauty" class="img-fluid rounded shadow">
                 </div>
             </div>
         </div>
@@ -157,7 +159,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Wedding Makeup & Hijab Do</h5>
                             <p class="card-text text-muted">Layanan all-in on-day + trial. Paket lengkap makeup, hair & hijab styling.</p>
-                            <a href="#contact" class="stretched-link text-pink">Pesan Sekarang</a>
+                            <a href="#contact" class="btn btn-pink btn-sm">Pesan Sekarang</a>
                         </div>
                     </div>
                 </div>
@@ -167,7 +169,7 @@
                             <h5 class="card-title">Graduation Glam</h5>
                             <p class="card-text text-muted">Soft glam yang pas untuk pemotretan wisuda dan acara keluarga.
                             </p>
-                            <a href="#contact" class="stretched-link text-pink">Pesan Sekarang</a>
+                            <a href="#contact" class="btn btn-pink btn-sm">Pesan Sekarang</a>
                         </div>
                     </div>
                 </div>
@@ -176,7 +178,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Party & Photoshoot</h5>
                             <p class="card-text text-muted">Look bold, trendy, atau natural sesuai keinginanmu.</p>
-                            <a href="#contact" class="stretched-link text-pink">Pesan Sekarang</a>
+                            <a href="#contact" class="btn btn-pink btn-sm">Pesan Sekarang</a>
                         </div>
                     </div>
                 </div>
@@ -311,15 +313,15 @@
             col.className = 'col';
             col.innerHTML = `
         <div class="card h-100">
-          <img src="${p.img}" class="card-img-top" alt="${p.name}">
-          <div class="card-body d-flex flex-column">
-            <h6 class="card-title">${p.name}</h6>
-            <p class="text-muted small mb-2">Kategori: Makeup</p>
-            <div class="mt-auto d-flex justify-content-between align-items-center">
-              <div class="fw-semibold">Rp${p.price.toLocaleString()}</div>
-              <button class="btn btn-sm btn-pink add-btn" data-id="${p.id}">Tambah</button>
-            </div>
-          </div>
+            <img src="${p.img}" class="card-img-top" alt="${p.name}">
+                <div class="card-body d-flex flex-column">
+                    <h6 class="card-title">${p.name}</h6>
+                    <p class="text-muted small mb-2">Kategori: Makeup</p>
+                    <div class="mt-auto d-flex justify-content-between align-items-center">
+                        <div class="fw-semibold">Rp${p.price.toLocaleString()}</div>
+                        <button class="btn btn-sm btn-pink add-btn" data-id="${p.id}">Tambah</button>
+                    </div>
+                </div>
         </div>`;
             grid.appendChild(col);
         });
